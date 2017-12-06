@@ -5,7 +5,7 @@ import java.util.List;
 import m3105.kebabvisitor.Kebab;
 import m3105.kebabvisitor.visitor.VisiteurDeRegime;
 
-public abstract class Ingredient implements Kebab {
+public abstract class Ingredient extends Kebab {
 
 	protected String nom;
 	protected Kebab kebab;
@@ -19,11 +19,6 @@ public abstract class Ingredient implements Kebab {
 		List<Ingredient> ingredients = kebab.getIngredients();
 		ingredients.add(this);
 		return ingredients;
-	}
-
-	public boolean isVegetarien() {
-		return kebab.isVegetarien();
-		// Il faut déléguer conformément à la documentation du pattern Decorator
 	}
 
 	public boolean isPescetarien() {

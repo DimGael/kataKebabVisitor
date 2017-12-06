@@ -1,6 +1,5 @@
 package m3105.kebabvisitor.visitor;
 
-import m3105.kebabvisitor.Assiette;
 import m3105.kebabvisitor.ingredients.*;
 
 public interface VisiteurDeRegime {
@@ -15,6 +14,5 @@ public interface VisiteurDeRegime {
 	boolean visit(Sauce element);
 	boolean visit(Thon element);
 	boolean visit(Tomate element);
-	boolean visit(Assiette element);
 	
 }
