@@ -1,6 +1,7 @@
 package m3105.kebabvisitor.ingredients;
 
 import m3105.kebabvisitor.Kebab;
+import m3105.kebabvisitor.visitor.VisiteurDeRegime;
 
 public class Oignon extends Ingredient {
 
@@ -18,4 +19,9 @@ public class Oignon extends Ingredient {
 		return super.isPescetarien();
 	}
 
+
+	@Override
+	public boolean accept(VisiteurDeRegime visiteur) {
+		return visiteur.visit(this);
+	}
 }

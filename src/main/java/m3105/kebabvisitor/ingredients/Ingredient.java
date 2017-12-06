@@ -3,6 +3,7 @@ package m3105.kebabvisitor.ingredients;
 import java.util.List;
 
 import m3105.kebabvisitor.Kebab;
+import m3105.kebabvisitor.visitor.VisiteurDeRegime;
 
 public abstract class Ingredient implements Kebab {
 
@@ -28,5 +29,7 @@ public abstract class Ingredient implements Kebab {
 	public boolean isPescetarien() {
 		return kebab.isPescetarien();
 	}
+	
+	public abstract boolean accept(VisiteurDeRegime visiteur);
 
 }
